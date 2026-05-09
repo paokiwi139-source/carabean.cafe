@@ -1,0 +1,614 @@
+/* ------------------------------
+   Global Reset
+--------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4a2417;
+  line-height: 1.5;
+  background-color: #fff8a8;
+  overflow-x: hidden;
+}
+
+/* ------------------------------
+   Top Bar
+--------------------------------*/
+.top-bar {
+  background: #4a2417;
+  color: #fff8d6;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 1rem;
+}
+
+/* ------------------------------
+   Navigation
+--------------------------------*/
+nav {
+  width: 100%;
+  background: #fff8a8;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 22px 50px;
+}
+
+nav div:first-child {
+  justify-self: start;
+}
+
+nav a {
+  color: #4a2417;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hours {
+  grid-column: 2;
+  justify-self: center;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+/* ------------------------------
+   Hero Section
+--------------------------------*/
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 150px);
+  margin: 0;
+  padding: 0;
+  background-image: url("Gallery/website-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 168, 0.12);
+}
+
+.hero-content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 0 30px 60px;
+}
+
+.hero h1 {
+  width: 100%;
+  font-family: Georgia, serif;
+  font-size: clamp(5rem, 16vw, 14rem);
+  color: #fff8a8;
+  line-height: 0.9;
+  letter-spacing: -4px;
+  text-align: center;
+}
+
+.hero p {
+  font-family: Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: bold;
+  color: #fff8a8;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* ------------------------------
+   Main Sections
+--------------------------------*/
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+section h2 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #4a2417;
+  text-align: center;
+}
+
+/* ------------------------------
+   About Section
+--------------------------------*/
+.about-section {
+  max-width: none;
+  padding: 0;
+  background: #fff;
+  color: #5a230f;
+}
+
+.about-header {
+  background: #5a230f;
+  text-align: center;
+  padding: 75px 20px 85px;
+}
+
+.about-header h2 {
+  font-family: Georgia, serif;
+  color: #fff;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 1;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-image {
+  aspect-ratio: 4/3;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text boxes */
+.about-text {
+  min-height: 520px;
+  padding: 80px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-text h3 {
+  font-family: Georgia, serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 0.95;
+  margin-bottom: 35px;
+  color: #5a230f;
+}
+
+.about-text p {
+  max-width: 600px;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.about-box {
+  background: #f7e5c3;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+/* ------------------------------
+   Mobile
+--------------------------------*/
+@media (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text,
+  .about-image {
+    min-height: auto;
+  }
+
+  .about-text {
+    padding: 60px 25px;
+  }
+
+  .about-image img {
+    height: 380px;
+  }
+}
+
+/* ------------------------------
+   Catering Form
+--------------------------------*/
+.catering-form {
+  background: #fff8a8;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #4a2417;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fffdf0;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button {
+  background: #4a2417;
+  color: #fff8a8;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  justify-self: center;
+}
+
+button:hover {
+  background: #6b3420;
+}
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+footer {
+  background: #4a2417;
+  color: #fff8d6;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ------------------------------
+   Mobile
+--------------------------------*/
+@media (max-width: 700px) {
+  nav {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav div:first-child {
+    justify-self: center;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .hours {
+    grid-column: 1;
+    font-size: 1.25rem;
+  }
+
+  .hero {
+    min-height: 75vh;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 0 20px 40px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .menu-item {
+    font-size: 1rem;
+  }
+
+  .about-box {
+    padding: 25px;
+  }
+}
+
+/* ------------------------------
+   Menu Feature Section
+--------------------------------*/
+.menu-feature {
+  max-width: none;
+  padding: 0;
+  background: #fff8a8;
+  color: #4a2417;
+  overflow: hidden;
+}
+
+/* Moving pastry image */
+.pastry-banner {
+  width: 100%;
+  height: 85vh;
+  min-height: 420px;
+  max-height: 900px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pastry-banner img {
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transform: translateX(var(--scroll-shift, 0px));
+  transition: transform 0.1s linear;
+  display:block
+}
+
+/* Curved yellow overlay feeling */
+.pastry-title {
+  background: #fff8a8;
+  padding: 20px 50px 50px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 80% 40px;
+  border-top-right-radius: 80% 40px;
+}
+
+.pastry-title p {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.pastry-title h2 {
+  font-family: Georgia, serif;
+  margin-top: 20px;
+  font-size: clamp(1rem, 5vw, 4rem);
+  line-height: 0.9;
+  text-align: left;
+  color: #5a230f;
+}
+
+/* ------------------------------
+   Main Menu Layout
+--------------------------------*/
+.menu-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  margin-top: -10px;
+}
+
+/* Left side */
+.menu-text {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* MENU title */
+.menu-text .small-title {
+  font-family: Georgia, serif;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.menu-text > h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(4rem, 7vw, 6rem);
+  text-align: center;
+  margin-bottom: 50px;
+  color: #5a230f;
+}
+
+/* Columns */
+.menu-columns {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* Bigger menu text */
+.menu-columns p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.menu-gap {
+  margin-top: 25px;
+}
+/* Menu headings */
+.menu-columns h3,
+.menu-columns h4 {
+  font-size: 1.5rem;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  color: #4a2417;
+}
+
+.menu-columns h3:first-child,
+.menu-columns h4:first-child {
+  margin-top: 0;
+}
+
+/* Right side image */
+.menu-image {
+  display: flex;
+  align-items: stretch;
+  margin-top: 80px;
+}
+
+.menu-image img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+/* ------------------------------
+   Mobile
+--------------------------------*/
+@media (max-width: 850px) {
+  .menu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-text {
+    padding: 40px 25px;
+  }
+
+  .menu-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .menu-image img {
+    height: 350px;
+  }
+
+  .pastry-title p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .pastry-title h2 {
+    text-align: center;
+  }
+}
+/*------------------------------------------
+
+Gallery-section
+
+------------------------------------------*/
+
+.gallery-section {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);  
+  background: #f6e6d3;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #5a230f;
+}
+
+.gallery-header p {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+}
+
+.gallery-header h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+}
+
+/* Full-width carousel row */
+.gallery-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) 90px;
+  align-items: center;
+}
+
+.gallery-window {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-track {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+/* Same height, natural width */
+.gallery-track img {
+  height: 650px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  border-radius: 25px;
+  flex-shrink: 0;
+
+  opacity: 0.35;
+  transform: scale(0.92);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.gallery-track img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Arrows centred beside gallery */
+.gallery-btn {
+  position: static;
+  transform: none;
+  justify-self: center;
+  align-self: center;
+
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #5a230f;
+  color: #fff8a8;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .gallery-container {
+    grid-template-columns: 55px minmax(0, 1fr) 55px;
+  }
+
+  .gallery-track img {
+    height: 430px;
+  }
+
+  .gallery-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+  }
+}
