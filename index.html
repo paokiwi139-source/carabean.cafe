@@ -60,30 +60,35 @@
         <div>
           <h3>Hot Drinks</h3>
 
+          <p>Hot Chocolate</p>
+          <p>Chai</p>
           <h4>Sizes</h4>
           <p>Small $5.00</p>
           <p>Regular $5.50</p>
           <p>Large $6.00</p>
 
-          <h4>Coffee + Milk Alternatives:</h4>
+          <h4>Milk Alternatives:</h4>
           <p>Oat, Soy, Almond 50c</p>
           <p>Decaf 50c</p>
 
-          <p class="menu-gap">Flavoured Shots: 50c</p>
-          <p class="menu-gap">Hot Lemon Honey Ginger*</p>
-          <p>Hot Choc* Chai* $3.50</p>
+          <p>Flavoured Shots: 50c</p>
+          <p>Hazelnut/ vanilla/ caramel</p>
+          <p class="menu-gap">Hot Lemon Honey Ginger $3.50</p>
+          <h4>Vouchers available upon request</h4>
+
         </div>
 
         <div>
+          <h3>Coffee</h3>
+          <p>Cappuccino, Latte, Flat White</p>
+          <p>Mochaccino, Americano, Long black</p>
+          <p>Espresso $4.00</p>
+
+
           <h3>Cold Drinks</h3>
           <p>Sodas $3.50</p>
           <p>Fluffy $2.00</p>
           <p>Spring Water $2.50</p>
-
-          <h3>Coffee</h3>
-          <p>Cappuccino*Latte*Flat White*</p>
-          <p>Mochaccino*Americano*Long black*</p>
-          <p>Espresso $4.00</p>
 
           <h3>Food</h3>
           <p>Scones $4.50</p>
@@ -140,7 +145,7 @@
     </div>
 
     <div class="about-image">
-      <img src="Gallery/outside-looking-in.jpg" alt="Inside the coffee caravan">
+      <img src="Gallery/outside-looking-in.JPG" alt="Inside the coffee caravan">
     </div>
 
   </div>
@@ -180,15 +185,29 @@
 </section>
 
 <section id="catering" class="catering-form">
-  <h2>Catering Requests</h2>
+  <h2>Special Event</h2>
 
-  <form>
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <input type="text" name="event" placeholder="Event type / date">
-    <textarea name="message" placeholder="Tell us about your catering request"></textarea>
-    <button type="submit">Send Request</button>
-  </form>
+  <form action="https://formsubmit.co/kellyclanwellington@gmail.com" method="POST">
+
+  <input type="hidden" name="_subject" value="New Carabean Catering Request">
+
+  <input type="hidden" name="_captcha" value="false">
+
+  <input type="text" name="name" placeholder="Your name" required>
+
+  <input type="email" name="email" placeholder="Your email" required>
+
+  <input type="text" name="event" placeholder="Event type / date">
+
+  <textarea
+    name="message"
+    placeholder="Tell us about your special event at Red Rocks!"
+    required
+  ></textarea>
+
+  <button type="submit">Send Request</button>
+
+</form>
 </section>
 
 <section class="about-box">
