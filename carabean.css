@@ -612,3 +612,249 @@ Gallery-section
     font-size: 1.4rem;
   }
 }
+
+/* ------------------------------
+   Tablet + Mobile Responsiveness
+--------------------------------*/
+
+/* iPad / small laptop */
+@media (max-width: 1024px) {
+  nav {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px 24px;
+    text-align: center;
+  }
+
+  nav div:first-child {
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+  .hours {
+    grid-column: 1;
+    font-size: 1.35rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 15vw, 9rem);
+    letter-spacing: -2px;
+  }
+
+  .pastry-banner {
+    height: 60vh;
+  }
+
+  .menu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-image {
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .menu-image img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+  }
+
+  .menu-columns {
+    gap: 40px;
+  }
+
+  .about-text {
+    padding: 65px 40px;
+  }
+}
+
+/* phones */
+@media (max-width: 700px) {
+  section {
+    padding: 55px 18px;
+  }
+
+  .top-bar {
+    font-size: 0.9rem;
+    padding: 12px 15px;
+  }
+
+  nav {
+    padding: 18px 14px;
+  }
+
+  nav div:first-child {
+    gap: 10px 14px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .hours {
+    font-size: 1.05rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 0 14px 38px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 18vw, 5.8rem);
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 1.35rem;
+  }
+
+  .pastry-banner {
+    height: 52vh;
+    min-height: 320px;
+  }
+
+  .pastry-banner img {
+    width: 135%;
+    object-position: center;
+  }
+
+  .pastry-title {
+    padding: 25px 20px 45px;
+    margin-top: -25px;
+  }
+
+  .pastry-title p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .pastry-title h2 {
+    font-size: clamp(2.4rem, 13vw, 4rem);
+    text-align: center;
+  }
+
+  .menu-text {
+    padding: 45px 20px;
+  }
+
+  .menu-text > h2 {
+    font-size: clamp(3rem, 16vw, 5rem);
+    margin-bottom: 35px;
+  }
+
+  .menu-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-columns p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .menu-columns h3,
+  .menu-columns h4 {
+    font-size: 1.3rem;
+  }
+
+  .menu-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-header {
+    padding: 55px 20px 60px;
+  }
+
+  .about-header h2 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    min-height: auto;
+    padding: 55px 22px;
+  }
+
+  .about-text h3 {
+    font-size: clamp(2.8rem, 14vw, 4.2rem);
+    margin-bottom: 25px;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    max-width: 100%;
+  }
+
+  .about-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .about-image img {
+    height: 100%;
+  }
+
+  input,
+  textarea {
+    font-size: 1rem;
+  }
+
+  .gallery-section {
+    padding: 70px 0;
+  }
+
+  .gallery-container {
+    grid-template-columns: 45px minmax(0, 1fr) 45px;
+  }
+
+  .gallery-track {
+    gap: 18px;
+  }
+
+  .gallery-track img {
+    height: 360px;
+    border-radius: 18px;
+  }
+
+  .gallery-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+}
+
+/* very small phones */
+@media (max-width: 430px) {
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+
+  .menu-columns p {
+    font-size: 1rem;
+  }
+
+  .gallery-track img {
+    height: 300px;
+  }
+}
